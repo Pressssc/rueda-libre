@@ -1,0 +1,15 @@
+bitacora de configuracion y analisis de red
+
+Cuando un usuario escribe la dirección del sitio, el navegador envía una
+petición http al servidor los datos registrados son
+
+• URL Completa: http://127.0.0
+
+"index.html"
+
+Dirección probada: http://127.0.0
+codigo de estado : 202 ok                      
+
+
+Dirección probada: http://127.0.0
+Código de estado: 404 not found
