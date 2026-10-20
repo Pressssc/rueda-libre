@@ -1,0 +1,244 @@
+/* ==========================================================================
+   ESTILOS GLOBALES Y CONFIGURACIÓN DE PÁGINA
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f7f9fa;
+    padding-bottom: 60px; /* Espacio para el footer flotante */
+}
+
+/* Contenedor invisible para centrar y dar margen a los textos */
+body > h1, body > p, section, header {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   MENÚ DE NAVEGACIÓN MODERNO (NAV)
+   ========================================================================== */
+nav {
+    background-color: #1b4332; /* Verde bosque oscuro profesional */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    max-width: 900px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 20px;
+}
+
+nav ul li {
+    margin-right: 25px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #52b788; /* Verde lima brillante al pasar el mouse */
+}
+
+/* ==========================================================================
+   TIPOGRAFÍAS Y ENCABEZADOS
+   ========================================================================== */
+h1 {
+    font-size: 2.5rem;
+    color: #1b4332;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #2d6a4f;
+    border-bottom: 2px solid #d8f3dc;
+    padding-bottom: 8px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #40916c;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+a {
+    color: #2d6a4f;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #1b4332;
+}
+
+/* Botón de acción destacado (Reservar ahora) */
+a[href*="reservas.html"], a[href*="://google.com"] {
+    display: inline-block;
+    background-color: #52b788;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a[href*="reservas.html"]:hover, a[href*="://google.com"]:hover {
+    background-color: #40916c;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   IMÁGENES ADAPTABLES
+   ========================================================================== */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto !important; /* Mantiene la proporción correcta */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 20px 0;
+}
+
+/* ==========================================================================
+   LISTAS Y DESCRIPCIONES (OL, UL, DL)
+   ========================================================================== */
+ul, ol, dl {
+    margin: 15px 0 25px 30px;
+}
+
+li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+/* Estilización de la lista de horarios (<dl>) */
+dl {
+    margin-left: 0;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+dt {
+    font-weight: bold;
+    color: #1b4332;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: #555555;
+}
+
+/* ==========================================================================
+   TABLAS ESTILIZADAS Y PROFESIONALES
+   ========================================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+caption {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #666666;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+th, td {
+    padding: 14px 18px;
+    text-align: left;
+}
+
+thead {
+    background-color: #2d6a4f;
+    color: #ffffff;
+}
+
+thead th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #eeeeee;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:will-change {
+    background-color: #f8fdf9;
+}
+
+tbody tr:hover {
+    background-color: #f2f9f5; /* Efecto cebra dinámico al pasar el cursor */
+}
+
+tbody th[scope="row"] {
+    background-color: #f8fdf9;
+    color: #1b4332;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+footer {
+    background-color: #111111;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #52b788;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
