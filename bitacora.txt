@@ -1,8 +1,3 @@
-========================================================================
-            MATRIZ DE ENRUTAMIENTO DE ENLACES DEL SITIO (v0.1)
-========================================================================
-A continuación se documenta el mapa de navegación del sitio para validar 
-el comportamiento de las rutas relativas aplicadas en el menú común:
 
 Origen: index.html  Destino: index.html  Ruta: "index.html"
 Origen: index.html Destino: tarifas.html Ruta: "paginas/tarifas.html"
@@ -16,7 +11,10 @@ Origen: paginas/reservas.html  Destino: index.html  Ruta: "../index.html"
 Origen: paginas/reservas.html Destino: tarifas.html  Ruta: "tarifas.html"
 Origen: paginas/reservas.html  Destino: reservas.html  Ruta: "reservas.html"
 
--
-VALIDACIÓN ADICIONAL DE ENLACES INTERNOS
-index.html (párrafo 1) index.html (Encuéntranos) Ruta: "#encuentranos"
-index.html (servicios) tarifas.html (Recorridos)  Ruta: "paginas/tarifas.html#tabla-recorridos"
+color
+
+Verde Ruta (#1E7A4F): Usado para botones y enlaces
+Naranja Pedal (#F39A2B): Destacados y botones 
+Azul Noche (#14213D): Títulos y encabezado
+Crema (#FAF6EF): Fondo general 
+Gris Asfalto (#5B6470): Texto secundario 

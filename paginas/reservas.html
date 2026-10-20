@@ -3,40 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ponte en contacto con Rueda Libre para reservar tus bicicletas o recorridos guiados en Medellín.">
+    <meta name="description" content="Formulario oficial de reserva de bicicletas y recorridos guiados en Rueda Libre, Medellín.">
     <title>Reserva tu Bicicleta | Rueda Libre</title>
-    <!-- Enlace al CSS subiendo un nivel -->
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
 
-    <!-- Menú Común Global -->
-    <nav>
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="tarifas.html">Tarifas y rutas</a></li>
-            <li><a href="reservas.html">Reservas</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1>Reserva tu bicicleta</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tarifas.html">Tarifas y rutas</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1>Reserva tu bicicleta</h1>
-    <p>Nuestros formularios automatizados se encuentran en mantenimiento para mejorar la experiencia de usuario. Mientras se habilita el sistema, gestiona tu reserva directamente con nosotros:</p>
+    <main>
+        <section id="formulario-reserva">
+            <h2>Formulario de reserva</h2>
+            <form action="#" method="post">
+                
+                <!-- Grupo 1: Tus datos -->
+                <fieldset>
+                    <legend>Tus datos</legend>
+                    
+                    <div>
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Ej. Juan Pérez">
+                    </div>
 
-    <section id="contacto-reservas">
-        <h2>Medios de contacto rápido</h2>
-        <p>Envíanos un mensaje especificando tipo de bicicleta, fecha y hora requerida a nuestro correo electrónico oficial de atención: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
-    </section>
+                    <div>
+                        <label for="documento">Documento de identidad:</label>
+                        <input type="text" id="documento" name="documento" required pattern="[0-9]{6,10}" title="Solo números, entre 6 y 10 dígitos" placeholder="Ej. 123456789">
+                    </div>
 
-    <section id="horarios-atencion">
-        <h2>Horario de atención al público</h2>
-        <dl>
-            <dt>Lunes a Viernes</dt>
-            <dd>7:00 a. m. a 7:00 p. m.</dd>
-            
-            <dt>Sábados, Domingos y Festivos</dt>
-            <dd>6:00 a. m. a 2:00 p. m.</dd>
-        </dl>
-    </section>
+                    <div>
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" required placeholder="correo@ejemplo.com">
+                    </div>
+
+                    <div>
+                        <label for="celular">Celular:</label>
+                        <input type="tel" id="celular" name="celular" required pattern="3[0-9]{9}" title="Debe tener 10 dígitos y empezar por 3" placeholder="3001234567">
+                    </div>
+                </fieldset>
+
+                <!-- Grupo 2: Tu alquiler -->
+                <fieldset>
+                    <legend>Tu alquiler</legend>
+
+                    <div>
+                        <label for="fecha">Fecha del alquiler (Entre 1 nov y 31 dic de 2026):</label>
+                        <input type="date" id="fecha" name="fecha" required min="2026-11-01" max="2026-12-31">
+                    </div>
+
+                    <div>
+                        <label for="tipo_bici">Tipo de bicicleta y plan:</label>
+                        <select id="tipo_bici" name="tipo_bici" required>
+                            <option value="">-- Seleccione una opción --</option>
+                            <optgroup label="Alquiler Urbana">
+                                <option value="urbana_1h">Urbana - 1 hora</option>
+                                <option value="urbana_4h">Urbana - Medio día (4 h)</option>
+                                <option value="urbana_dia">Urbana - Día completo</option>
+                            </optgroup>
+                            <optgroup label="Recorridos Guiados">
+                                <option value="rio_parques">Río y Parques</option>
+                                <option value="sabores_barrio">Sabores de Barrio</option>
+                                <option value="reto_palmas">Reto Las Palmas</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="cantidad">Cantidad de bicicletas (1 a 6):</label>
+                        <input type="number" id="cantidad" name="cantidad" required min="1" max="6" value="1">
+                    </div>
+
+                    <div>
+                        <label for="comentarios">Comentarios adicionales (máximo 300 caracteres):</label>
+                        <textarea id="comentarios" name="comentarios" maxlength="300" rows="4" placeholder="Opcional"></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Grupo 3: Confirmación -->
+                <fieldset>
+                    <legend>Confirmación</legend>
+
+                    <div>
+                        <input type="checkbox" id="politicas" name="politicas" required>
+                        <label for="politicas">Acepto las políticas de alquiler y términos del servicio *</label>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Enviar reserva</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2026 Rueda Libre. Correo de contacto: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
