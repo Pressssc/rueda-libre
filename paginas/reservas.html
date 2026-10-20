@@ -11,7 +11,7 @@
 
     <header>
         <h1>Reserva tu bicicleta</h1>
-        <nav>
+        <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="tarifas.html">Tarifas y rutas</a></li>
@@ -23,6 +23,8 @@
     <main>
         <section id="formulario-reserva">
             <h2>Formulario de reserva</h2>
+            <p>Por favor completa los siguientes campos para tramitar tu solicitud de alquiler o recorrido guiado.</p>
+            
             <form action="#" method="post">
                 
                 <!-- Grupo 1: Tus datos -->
@@ -36,7 +38,7 @@
 
                     <div>
                         <label for="documento">Documento de identidad:</label>
-                        <input type="text" id="documento" name="documento" required pattern="[0-9]{6,10}" title="Solo números, entre 6 y 10 dígitos" placeholder="Ej. 123456789">
+                        <input type="text" id="documento" name="documento" required pattern="[0-9]{6,10}" title="Debe contener solo números, entre 6 y 10 dígitos" placeholder="Ej. 123456789">
                     </div>
 
                     <div>
@@ -46,7 +48,7 @@
 
                     <div>
                         <label for="celular">Celular:</label>
-                        <input type="tel" id="celular" name="celular" required pattern="3[0-9]{9}" title="Debe tener 10 dígitos y empezar por 3" placeholder="3001234567">
+                        <input type="tel" id="celular" name="celular" required pattern="3[0-9]{9}" title="Debe tener 10 dígitos y empezar obligatoriamente por 3" placeholder="Ej. 3001234567">
                     </div>
                 </fieldset>
 
@@ -55,7 +57,7 @@
                     <legend>Tu alquiler</legend>
 
                     <div>
-                        <label for="fecha">Fecha del alquiler (Entre 1 nov y 31 dic de 2026):</label>
+                        <label for="fecha">Fecha del alquiler (Del 1 de nov al 31 de dic de 2026):</label>
                         <input type="date" id="fecha" name="fecha" required min="2026-11-01" max="2026-12-31">
                     </div>
 
@@ -63,15 +65,15 @@
                         <label for="tipo_bici">Tipo de bicicleta y plan:</label>
                         <select id="tipo_bici" name="tipo_bici" required>
                             <option value="">-- Seleccione una opción --</option>
-                            <optgroup label="Alquiler Urbana">
-                                <option value="urbana_1h">Urbana - 1 hora</option>
-                                <option value="urbana_4h">Urbana - Medio día (4 h)</option>
-                                <option value="urbana_dia">Urbana - Día completo</option>
+                            <optgroup label="Alquiler Individual">
+                                <option value="urbana">Bicicleta Urbana</option>
+                                <option value="montana">Bicicleta de Montaña</option>
+                                <option value="electrica">Bicicleta Eléctrica</option>
                             </optgroup>
                             <optgroup label="Recorridos Guiados">
-                                <option value="rio_parques">Río y Parques</option>
-                                <option value="sabores_barrio">Sabores de Barrio</option>
-                                <option value="reto_palmas">Reto Las Palmas</option>
+                                <option value="rio_parques">Recorrido Río y Parques</option>
+                                <option value="sabores_barrio">Recorrido Sabores de Barrio</option>
+                                <option value="reto_palmas">Recorrido Reto Las Palmas</option>
                             </optgroup>
                         </select>
                     </div>
@@ -83,7 +85,7 @@
 
                     <div>
                         <label for="comentarios">Comentarios adicionales (máximo 300 caracteres):</label>
-                        <textarea id="comentarios" name="comentarios" maxlength="300" rows="4" placeholder="Opcional"></textarea>
+                        <textarea id="comentarios" name="comentarios" maxlength="300" rows="4" placeholder="Opcional. Indique detalles adicionales aquí."></textarea>
                     </div>
                 </fieldset>
 
