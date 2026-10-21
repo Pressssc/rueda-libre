@@ -35,11 +35,35 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
     padding: 0 20px;
 }
 
 nav ul li {
-    margin-right: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li:first-child {
+    flex-shrink: 0;
+}
+
+nav .logo-nav {
+    display: block;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+nav .logo-nav img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 nav ul li a {
