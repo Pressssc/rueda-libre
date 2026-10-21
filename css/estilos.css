@@ -1,6 +1,4 @@
-/* ==========================================================================
-   ESTILOS GLOBALES Y CONFIGURACIÓN DE PÁGINA
-   ========================================================================== */
+/* stl glb */
 * {
     margin: 0;
     padding: 0;
@@ -12,21 +10,18 @@ body {
     line-height: 1.6;
     color: #333333;
     background-color: #f7f9fa;
-    padding-bottom: 60px; /* Espacio para el footer flotante */
+    padding-bottom: 60px; 
 }
 
-/* Contenedor invisible para centrar y dar margen a los textos */
 body > h1, body > p, section, header {
     max-width: 900px;
     margin: 20px auto;
     padding: 0 20px;
 }
 
-/* ==========================================================================
-   MENÚ DE NAVEGACIÓN MODERNO (NAV)
-   ========================================================================== */
+/* menu */
 nav {
-    background-color: #1b4332; /* Verde bosque oscuro profesional */
+    background-color: #1b4332; 
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -56,12 +51,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #52b788; /* Verde lima brillante al pasar el mouse */
+    color: #52b788; /* visaje cuando uno pasa el mouse ( no me acuerdo el la paabra)*/
 }
 
-/* ==========================================================================
-   TIPOGRAFÍAS Y ENCABEZADOS
-   ========================================================================== */
+/* tipo de letra */
 h1 {
     font-size: 2.5rem;
     color: #1b4332;
@@ -101,7 +94,7 @@ a:hover {
     color: #1b4332;
 }
 
-/* Botón de acción destacado (Reservar ahora) */
+/* boton de reserva */
 a[href*="reservas.html"], a[href*="://google.com"] {
     display: inline-block;
     background-color: #52b788;
@@ -119,9 +112,7 @@ a[href*="reservas.html"]:hover, a[href*="://google.com"]:hover {
     transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   IMÁGENES ADAPTABLES
-   ========================================================================== */
+/* imagenes */
 img {
     display: block;
     max-width: 100%;
@@ -139,9 +130,7 @@ img {
     margin: 20px auto;
 }
 
-/* ==========================================================================
-   LISTAS Y DESCRIPCIONES (OL, UL, DL)
-   ========================================================================== */
+/* listas */
 ul, ol, dl {
     margin: 15px 0 25px 30px;
 }
@@ -151,7 +140,7 @@ li {
     padding-left: 5px;
 }
 
-/* Estilización de la lista de horarios (<dl>) */
+/* lista de horarios */
 dl {
     margin-left: 0;
     background: #ffffff;
@@ -173,9 +162,7 @@ dd {
     color: #555555;
 }
 
-/* ==========================================================================
-   TABLAS ESTILIZADAS Y PROFESIONALES
-   ========================================================================== */
+/* tablas */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -221,7 +208,7 @@ tbody tr:will-change {
 }
 
 tbody tr:hover {
-    background-color: #f2f9f5; /* Efecto cebra dinámico al pasar el cursor */
+    background-color: #f2f9f5;
 }
 
 tbody th[scope="row"] {
@@ -230,9 +217,7 @@ tbody th[scope="row"] {
     font-weight: 600;
 }
 
-/* ==========================================================================
-   FORMULARIO DE RESERVA
-   ========================================================================== */
+/* formulario de reserva */
 #formulario-reserva {
     max-width: 1120px;
     margin: 30px auto 40px;
@@ -354,9 +339,7 @@ tbody th[scope="row"] {
     }
 }
 
-/* ==========================================================================
-   PIE DE PÁGINA (FOOTER)
-   ========================================================================== */
+/* pie de página */
 footer {
     background-color: #111111;
     color: #aaaaaa;
