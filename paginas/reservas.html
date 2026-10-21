@@ -23,36 +23,34 @@
     <main>
         <section id="formulario-reserva">
             <h2>Formulario de reserva</h2>
-            <p>Por favor completa los siguientes campos para tramitar tu solicitud de alquiler o recorrido guiado.</p>
+            <p>Por favor completa los siguientes campos para tu solicitud de alquiler o recorrido guiado.</p>
             
             <form action="#" method="post">
                 
-                <!-- Grupo 1: Tus datos -->
                 <fieldset>
                     <legend>Tus datos</legend>
                     
                     <div>
                         <label for="nombre">Nombre completo:</label>
-                        <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Ej. Juan Pérez">
+                        <input type="text" id="nombre" name="nombre" required minlength="3">
                     </div>
 
                     <div>
                         <label for="documento">Documento de identidad:</label>
-                        <input type="text" id="documento" name="documento" required pattern="[0-9]{6,10}" title="Debe contener solo números, entre 6 y 10 dígitos" placeholder="Ej. 123456789">
+                        <input type="text" id="documento" name="documento" required pattern="[0-9]{6,10}" title="Debe contener solo números, entre 6 y 10 dígitos">
                     </div>
 
                     <div>
                         <label for="correo">Correo electrónico:</label>
-                        <input type="email" id="correo" name="correo" required placeholder="correo@ejemplo.com">
+                        <input type="email" id="correo" name="correo" required>
                     </div>
 
                     <div>
                         <label for="celular">Celular:</label>
-                        <input type="tel" id="celular" name="celular" required pattern="3[0-9]{9}" title="Debe tener 10 dígitos y empezar obligatoriamente por 3" placeholder="Ej. 3001234567">
+                        <input type="tel" id="celular" name="celular" required pattern="3[0-9]{9}" title="Debe tener 10 dígitos y empezar obligatoriamente por 3">
                     </div>
                 </fieldset>
 
-                <!-- Grupo 2: Tu alquiler -->
                 <fieldset>
                     <legend>Tu alquiler</legend>
 
@@ -62,19 +60,28 @@
                     </div>
 
                     <div>
-                        <label for="tipo_bici">Tipo de bicicleta y plan:</label>
+                        <label for="tipo_bici">Tipo de bicicleta:</label>
                         <select id="tipo_bici" name="tipo_bici" required>
-                            <option value="">-- Seleccione una opción --</option>
+                            <option value="">-- Selecciona una bicicleta o indica que no necesitas una --</option>
                             <optgroup label="Alquiler Individual">
                                 <option value="urbana">Bicicleta Urbana</option>
                                 <option value="montana">Bicicleta de Montaña</option>
-                                <option value="electrica">Bicicleta Eléctrica</option>
+                                <option value="electrica">Bicicleta Electrica</option>
                             </optgroup>
+                            <option value="sin_bicicleta">No necesito alquilar una bicicleta</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="ruta">Recorrido guiado:</label>
+                        <select id="ruta" name="ruta" required>
+                            <option value="">-- Selecciona un recorrido o indica que no harás uno --</option>
                             <optgroup label="Recorridos Guiados">
                                 <option value="rio_parques">Recorrido Río y Parques</option>
-                                <option value="sabores_barrio">Recorrido Sabores de Barrio</option>
-                                <option value="reto_palmas">Recorrido Reto Las Palmas</option>
+                                <option value="sabores_barrio">Recorrido Barrios</option>
+                                <option value="reto_palmas">Recorrido Palmas</option>
                             </optgroup>
+                            <option value="sin_recorrido">No haré un recorrido guiado</option>
                         </select>
                     </div>
 
@@ -85,17 +92,16 @@
 
                     <div>
                         <label for="comentarios">Comentarios adicionales (máximo 300 caracteres):</label>
-                        <textarea id="comentarios" name="comentarios" maxlength="300" rows="4" placeholder="Opcional. Indique detalles adicionales aquí."></textarea>
+                        <textarea id="comentarios" name="comentarios" maxlength="300" rows="4"></textarea>
                     </div>
                 </fieldset>
 
-                <!-- Grupo 3: Confirmación -->
                 <fieldset>
                     <legend>Confirmación</legend>
 
                     <div>
                         <input type="checkbox" id="politicas" name="politicas" required>
-                        <label for="politicas">Acepto las políticas de alquiler y términos del servicio *</label>
+                        <label for="politicas">Acepto las políticas de alquiler *</label>
                     </div>
                 </fieldset>
 
@@ -105,7 +111,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Rueda Libre. Correo de contacto: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
+        <p>&copy; 2026 Rueda Libre. Contacto: <a href="mailto:hola@ruedalibre.ejemploriwi">hola@ruedalibre.ejemploriwi</a></p>
     </footer>
 
 </body>

@@ -125,10 +125,18 @@ a[href*="reservas.html"]:hover, a[href*="://google.com"]:hover {
 img {
     display: block;
     max-width: 100%;
-    height: auto !important; /* Mantiene la proporción correcta */
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     margin: 20px 0;
+}
+
+#banner-portada {
+    width: min(calc(100% - 40px), 1200px);
+    height: clamp(150px, 22vw, 280px);
+    object-fit: cover;
+    object-position: center 55%;
+    margin: 20px auto;
 }
 
 /* ==========================================================================
@@ -220,6 +228,130 @@ tbody th[scope="row"] {
     background-color: #f8fdf9;
     color: #1b4332;
     font-weight: 600;
+}
+
+/* ==========================================================================
+   FORMULARIO DE RESERVA
+   ========================================================================== */
+#formulario-reserva {
+    max-width: 1120px;
+    margin: 30px auto 40px;
+    padding: 28px 32px;
+    background-color: #ffffff;
+    border: 1px solid #e3ece6;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(27, 67, 50, 0.07);
+}
+
+#formulario-reserva h2 {
+    margin-top: 0;
+}
+
+#formulario-reserva > p {
+    margin-bottom: 26px;
+    text-align: left;
+}
+
+#formulario-reserva fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 24px;
+    margin-bottom: 22px;
+    padding: 24px;
+    border: 1px solid #d8e5dc;
+    border-radius: 8px;
+}
+
+#formulario-reserva legend {
+    padding: 0 10px;
+    color: #1b4332;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+#formulario-reserva fieldset > div {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 7px;
+}
+
+#formulario-reserva label {
+    color: #33443a;
+    font-weight: 600;
+}
+
+#formulario-reserva input:not([type="checkbox"]),
+#formulario-reserva select,
+#formulario-reserva textarea {
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 12px;
+    border: 1px solid #c9d7ce;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #333333;
+    font: inherit;
+}
+
+#formulario-reserva textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#formulario-reserva fieldset:nth-of-type(2) > div:last-child {
+    grid-column: 1 / -1;
+}
+
+#formulario-reserva fieldset:last-of-type {
+    grid-template-columns: 1fr;
+}
+
+#formulario-reserva fieldset:last-of-type > div {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+#formulario-reserva input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #2d6a4f;
+}
+
+#formulario-reserva button {
+    min-width: 190px;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #2d6a4f;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#formulario-reserva button:hover {
+    background-color: #1b4332;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 680px) {
+    #formulario-reserva {
+        margin: 20px 12px 32px;
+        padding: 22px 16px;
+    }
+
+    #formulario-reserva fieldset {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 20px 16px;
+    }
+
+    #formulario-reserva button {
+        width: 100%;
+    }
 }
 
 /* ==========================================================================
