@@ -1,382 +1,90 @@
-/* stl glb */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* pag*/
+
+
+:root {
+    --bs-primary: #1b4332;         
+    --bs-primary-rgb: 27, 67, 50;
+    --bs-link-color: #1b4332;
+    --bs-link-hover-color: #2d6a4f;
+    --bs-body-font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --bs-border-radius: 0.5rem;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333333;
-    background-color: #f7f9fa;
-    padding-bottom: 60px; 
+
+.btn-primary {
+    --bs-btn-bg: #1b4332;
+    --bs-btn-border-color: #1b4332;
+    --bs-btn-hover-bg: #2d6a4f;
+    --bs-btn-hover-border-color: #2d6a4f;
+    --bs-btn-active-bg: #2d6a4f;
 }
 
-body > h1, body > p, section, header {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 0 20px;
+.btn-outline-primary {
+    --bs-btn-color: #1b4332;
+    --bs-btn-border-color: #1b4332;
+    --bs-btn-hover-bg: #1b4332;
+    --bs-btn-hover-border-color: #1b4332;
 }
 
-/* menu */
-nav {
-    background-color: #1b4332; 
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
 
-nav ul {
-    max-width: 900px;
-    margin: 0 auto;
-    list-style: none;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 24px;
-    padding: 0 20px;
-}
-
-nav ul li {
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li:first-child {
-    flex-shrink: 0;
-}
-
-nav .logo-nav {
-    display: block;
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
-}
-
-nav .logo-nav img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none;
-}
-
-nav ul li a {
+.btn-naranja {
+    background-color: #d84315;
     color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    border: none;
 }
 
-nav ul li a:hover {
-    color: #52b788; /* visaje cuando uno pasa el mouse ( no me acuerdo el la paabra)*/
-}
-
-/* tipo de letra */
-h1 {
-    font-size: 2.5rem;
-    color: #1b4332;
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 1.8rem;
-    color: #2d6a4f;
-    border-bottom: 2px solid #d8f3dc;
-    padding-bottom: 8px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 1.3rem;
-    color: #40916c;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-p {
-    margin-bottom: 15px;
-    font-size: 1.05rem;
-    text-align: justify;
-}
-
-a {
-    color: #2d6a4f;
-    font-weight: 600;
-    transition: color 0.2s ease;
-}
-
-a:hover {
-    color: #1b4332;
-}
-
-/* boton de reserva */
-a[href*="reservas.html"], a[href*="://google.com"] {
-    display: inline-block;
-    background-color: #52b788;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-a[href*="reservas.html"]:hover, a[href*="://google.com"]:hover {
-    background-color: #40916c;
-    transform: translateY(-2px);
-}
-
-/* imagenes */
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    margin: 20px 0;
-}
-
-#banner-portada {
-    width: min(calc(100% - 40px), 1200px);
-    height: clamp(150px, 22vw, 280px);
-    object-fit: cover;
-    object-position: center 55%;
-    margin: 20px auto;
-}
-
-/* listas */
-ul, ol, dl {
-    margin: 15px 0 25px 30px;
-}
-
-li {
-    margin-bottom: 10px;
-    padding-left: 5px;
-}
-
-/* lista de horarios */
-dl {
-    margin-left: 0;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-
-dt {
-    font-weight: bold;
-    color: #1b4332;
-    font-size: 1.1rem;
-    margin-top: 10px;
-}
-
-dd {
-    margin-left: 20px;
-    margin-bottom: 10px;
-    color: #555555;
-}
-
-/* tablas */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 25px 0;
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-caption {
-    font-size: 0.95rem;
-    font-style: italic;
-    color: #666666;
-    margin-bottom: 8px;
-    text-align: left;
-}
-
-th, td {
-    padding: 14px 18px;
-    text-align: left;
-}
-
-thead {
-    background-color: #2d6a4f;
+.btn-naranja:hover, .btn-naranja:focus {
+    background-color: #bf360c;
     color: #ffffff;
 }
 
-thead th {
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-}
-
-tbody tr {
-    border-bottom: 1px solid #eeeeee;
-    transition: background-color 0.2s ease;
-}
-
-tbody tr:will-change {
-    background-color: #f8fdf9;
-}
-
-tbody tr:hover {
-    background-color: #f2f9f5;
-}
-
-tbody th[scope="row"] {
-    background-color: #f8fdf9;
-    color: #1b4332;
-    font-weight: 600;
-}
-
-/* formulario de reserva */
-#formulario-reserva {
-    max-width: 1120px;
-    margin: 30px auto 40px;
-    padding: 28px 32px;
-    background-color: #ffffff;
-    border: 1px solid #e3ece6;
-    border-radius: 12px;
-    box-shadow: 0 4px 18px rgba(27, 67, 50, 0.07);
-}
-
-#formulario-reserva h2 {
-    margin-top: 0;
-}
-
-#formulario-reserva > p {
-    margin-bottom: 26px;
-    text-align: left;
-}
-
-#formulario-reserva fieldset {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px 24px;
-    margin-bottom: 22px;
-    padding: 24px;
-    border: 1px solid #d8e5dc;
-    border-radius: 8px;
-}
-
-#formulario-reserva legend {
-    padding: 0 10px;
-    color: #1b4332;
-    font-size: 1.15rem;
-    font-weight: 600;
-}
-
-#formulario-reserva fieldset > div {
-    display: flex;
-    min-width: 0;
-    flex-direction: column;
-    gap: 7px;
-}
-
-#formulario-reserva label {
-    color: #33443a;
-    font-weight: 600;
-}
-
-#formulario-reserva input:not([type="checkbox"]),
-#formulario-reserva select,
-#formulario-reserva textarea {
-    width: 100%;
-    min-height: 46px;
-    padding: 10px 12px;
-    border: 1px solid #c9d7ce;
-    border-radius: 6px;
-    background-color: #ffffff;
-    color: #333333;
-    font: inherit;
-}
-
-#formulario-reserva textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-#formulario-reserva fieldset:nth-of-type(2) > div:last-child {
-    grid-column: 1 / -1;
-}
-
-#formulario-reserva fieldset:last-of-type {
-    grid-template-columns: 1fr;
-}
-
-#formulario-reserva fieldset:last-of-type > div {
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-}
-
-#formulario-reserva input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    accent-color: #2d6a4f;
-}
-
-#formulario-reserva button {
-    min-width: 190px;
-    padding: 12px 22px;
-    border: 0;
-    border-radius: 6px;
-    background-color: #2d6a4f;
-    color: #ffffff;
-    font: inherit;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-#formulario-reserva button:hover {
+.bg-verde-ruta {
     background-color: #1b4332;
-    transform: translateY(-1px);
 }
 
-@media (max-width: 680px) {
-    #formulario-reserva {
-        margin: 20px 12px 32px;
-        padding: 22px 16px;
-    }
-
-    #formulario-reserva fieldset {
-        grid-template-columns: 1fr;
-        gap: 18px;
-        padding: 20px 16px;
-    }
-
-    #formulario-reserva button {
-        width: 100%;
-    }
+.bg-verde-claro {
+    background-color: #e8f5e9;
 }
 
-/* pie de página */
-footer {
+.text-primary-custom {
+    color: #1b4332;
+}
+
+.text-naranja {
+    color: #ffab91;
+}
+
+.hero-custom {
+    background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(27, 67, 50, 0.85)), url('../img/portada.jpg') center/cover no-repeat;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.section-title-custom {
+    color: #1b4332;
+    font-weight: 700;
+    border-bottom: 3px solid #52b788;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.carousel-img {
+    height: 380px;
+    object-fit: cover;
+}
+
+.card-img-fixed {
+    height: 200px;
+    object-fit: cover;
+}
+
+.footer-custom {
     background-color: #111111;
-    color: #aaaaaa;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 5px;
-    font-size: 0.9rem;
 }
 
-footer a {
-    color: #52b788;
-    text-decoration: none;
+.max-w-700 {
+    max-width: 700px;
 }
 
-footer a:hover {
-    text-decoration: underline;
+.max-w-900 {
+    max-width: 900px;
 }
