@@ -7,6 +7,12 @@
     --bs-border-radius: 0.5rem;
 }
 
+/* Regla para evitar desbordamientos de imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .btn-primary {
     --bs-btn-bg: #1b4332;
     --bs-btn-border-color: #1b4332;
@@ -72,6 +78,50 @@
     object-fit: cover;
 }
 
+/* ==========================================================================
+   ESTILOS PARA LA SECCIÓN DE LA FLOTA (Grid + Flexbox)
+   ========================================================================== */
+.flota-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.tarjeta-flota {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: var(--bs-border-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-flota img {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.tarjeta-cuerpo {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tarjeta-cuerpo h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--bs-primary);
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta-cuerpo .precio {
+    font-weight: bold;
+    color: #1b4332;
+    margin-bottom: 1rem;
+}
+
 .footer-custom {
     background-color: #111111;
 }
@@ -83,7 +133,6 @@
 .max-w-900 {
     max-width: 900px;
 }
-
 
 .whatsapp-float {
     position: fixed;
@@ -109,4 +158,27 @@
     background-color: #1ebe5d;
     color: #ffffff;
     transform: scale(1.08);
+}
+
+/* ==========================================================================
+   AJUSTES RESPONSIVE (MÓVIL)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 220px; /* Reduce la altura en celulares */
+    }
+    
+    .carousel-caption {
+        padding: 0.25rem 0.5rem !important;
+    }
+
+    .carousel-caption h5 {
+        font-size: 0.95rem;
+        margin-bottom: 0.1rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+        margin-bottom: 0;
+    }
 }
