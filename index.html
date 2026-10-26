@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- CSS Propio (después de Bootstrap) -->
+    <!-- CSS Propio -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body class="pt-5 mt-3">
@@ -103,7 +103,7 @@
             <h2 class="section-title-custom mb-4">Nuestros Servicios y Flota</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
+                    <div class="card h-100 shadow-sm border-0 position-relative">
                         <img src="img/bicicleta.jpg" class="card-img-top card-img-fixed" alt="Bicicleta de alquiler urbana y de montaña">
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title h5 text-primary-custom">Alquiler de Bicicletas</h3>
@@ -123,11 +123,13 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <img src="img/portada.jpg" class="card-img-top card-img-fixed" alt="Taller mecánico de bicicletas">
+                    <!-- Tarjeta con etiqueta "Nuevo" posicionada (MiniReto 12) -->
+                    <div class="card h-100 shadow-sm border-0 position-relative">
+                        <span class="badge bg-danger position-absolute top-0 end-0 m-3 px-3 py-2 shadow">¡Nuevo!</span>
+                        <img src="img/portada.jpg" class="card-img-top card-img-fixed" alt="Bicicleta eléctrica de última tecnología">
                         <div class="card-body d-flex flex-column">
-                            <h3 class="card-title h5 text-primary-custom">Taller Básico</h3>
-                            <p class="card-text text-secondary">Servicio de despinche rápido y ajuste de frenos para que nunca dejes de rodar por la ciudad.</p>
+                            <h3 class="card-title h5 text-primary-custom">Flota Eléctrica</h3>
+                            <p class="card-text text-secondary">Experimenta asistencia de pedaleo avanzado para subir cualquier pendiente con total comodidad.</p>
                             <a href="paginas/reservas.html" class="btn btn-outline-primary mt-auto">Consultar taller</a>
                         </div>
                     </div>
@@ -173,6 +175,11 @@
 
     </main>
 
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/573000000000" target="_blank" class="whatsapp-float shadow" aria-label="Contactar por WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
     <!-- Pie de Página -->
     <footer class="footer-custom py-4 text-center text-light">
         <div class="container">
@@ -181,7 +188,7 @@
         </div>
     </footer>
 
-    <!-- JS Bundle de Bootstrap (Se carga una sola vez antes del cierre de body) -->
+    <!-- JS Bundle de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
