@@ -1,20 +1,33 @@
+bitacora -- Bootstrap
 
-Origen: index.html  Destino: index.html  Ruta: "index.html"
-Origen: index.html Destino: tarifas.html Ruta: "paginas/tarifas.html"
-Origen: index.html Destino: reservas.html  Ruta: "paginas/reservas.html"
+1. MAPA DE RUTAS Y ENLACES:
+- Origen: index.html  Destino: index.html  Ruta: "index.html"
+- Origen: index.html Destino: tarifas.html Ruta: "paginas/tarifas.html"
+- Origen: index.html Destino: reservas.html  Ruta: "paginas/reservas.html"
 
-Origen: paginas/tarifas.html Destino: index.html  Ruta: "../index.html"
-Origen: paginas/tarifas.html  Destino: tarifas.html  Ruta: "tarifas.html"
-Origen: paginas/tarifas.html  Destino: reservas.html Ruta: "reservas.html"
+- Origen: paginas/tarifas.html Destino: index.html  Ruta: "../index.html"
+- Origen: paginas/tarifas.html  Destino: tarifas.html  Ruta: "tarifas.html"
+- Origen: paginas/tarifas.html  Destino: reservas.html Ruta: "reservas.html"
 
-Origen: paginas/reservas.html  Destino: index.html  Ruta: "../index.html"
-Origen: paginas/reservas.html Destino: tarifas.html  Ruta: "tarifas.html"
-Origen: paginas/reservas.html  Destino: reservas.html  Ruta: "reservas.html"
+- Origen: paginas/reservas.html  Destino: index.html  Ruta: "../index.html"
+- Origen: paginas/reservas.html Destino: tarifas.html  Ruta: "tarifas.html"
+- Origen: paginas/reservas.html  Destino: reservas.html Ruta: "reservas.html"
 
-color
+2. PALETA DE COLORES CORPORATIVA:
+- Verde Ruta (#1E7A4F): Usado para botones y enlaces
+- Naranja Pedal (#F39A2B): Destacados y botones 
+- Azul Noche (#14213D): Títulos y encabezado
+- Crema (#FAF6EF): Fondo general 
+- Gris Asfalto (#5B6470): Texto secundario 
 
-Verde Ruta (#1E7A4F): Usado para botones y enlaces
-Naranja Pedal (#F39A2B): Destacados y botones 
-Azul Noche (#14213D): Títulos y encabezado
-Crema (#FAF6EF): Fondo general 
-Gris Asfalto (#5B6470): Texto secundario 
+3. INFORME COMPARATIVO (CSS PROPIO vs BOOTSTRAP 5):
+- Líneas de código CSS de distribución: 
+  * Versión CSS Propio (v1.5): ~120 líneas de código dedicadas a Media Queries, Flexbox personalizado y Grid manual.
+  * Versión Bootstrap (v2.0): 0 líneas de CSS de distribución; reemplazadas completamente por clases nativas de grilla (`row`, `col-*`, `g-*`) y utilidades.
+- Tiempo invertido en desarrollo:
+  * CSS Propio: Mayor tiempo configurando breakpoints manuales y solucionando desbordamientos.
+  * Bootstrap: Reducido drásticamente gracias a componentes prediseñados y sistemas de grilla listos para usar.
+- Ventajas y Control Perdido:
+  * Ventajas: Desarrollo mucho más rápido, consistencia impecable en multidispositivos y HTML más limpio.
+  * Desventajas: Menor control milimétrico sobre los componentes internos, requiriendo sobreescritura de estilos si se desea modificar la estructura nativa del framework.
+- Conclusión: La migración a Bootstrap optimizó por completo la estructura del sitio (portada, flota de 7 modelos, tarifas y reservas), reduciendo el esfuerzo de diseño responsive sin perder la identidad visual de la marca.

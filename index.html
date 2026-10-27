@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Rueda Libre: Alquiler de bicicletas y recorridos guiados por Medellín. Explora la ciudad de manera sostenible.">
     <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body class="pt-5 mt-3">
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-verde-ruta fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
@@ -37,37 +35,43 @@
             </div>
         </div>
     </nav>
-    <header class="hero-custom text-white text-center py-5 mb-4">
+    <header class="hero-custom text-white py-5 mb-4">
         <div class="container py-4">
-            <h1 class="display-4 fw-bold">Rueda Libre</h1>
-            <p class="lead max-w-700 mx-auto">¡Bienvenidos! Somos tu mejor aliado para recorrer y descubrir Medellín en bicicleta.</p>
-            <a href="paginas/reservas.html" class="btn btn-naranja btn-lg mt-3 fw-bold">
-                <i class="bi bi-arrow-right-circle me-1" aria-hidden="true"></i> Reservar ahora
-            </a>
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-lg-6 text-center text-lg-start">
+                    <h1 class="display-4 fw-bold">Rueda Libre</h1>
+                    <p class="lead">¡Bienvenidos! Somos tu mejor aliado para recorrer y descubrir Medellín en bicicleta.</p>
+                    <a href="paginas/reservas.html" class="btn btn-naranja btn-lg mt-3 fw-bold">
+                        <i class="bi bi-arrow-right-circle me-1" aria-hidden="true"></i> Reservar ahora
+                    </a>
+                </div>
+                <div class="col-12 col-lg-6 text-center">
+                    <img src="img/portada.jpg" class="img-fluid rounded shadow" alt="Bicicleta urbana">
+                </div>
+            </div>
         </div>
     </header>
-
     <main class="container my-4">
         <section class="mb-5">
             <h2 class="section-title-custom mb-4">Promociones del Mes</h2>
             <div id="promoCarousel" class="carousel slide shadow-sm rounded overflow-hidden" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="img/portada.jpg" class="d-block w-100 carousel-img" alt="Promoción Martes 2x1 en bicicletas urbanas">
+                        <img src="img/2por1.jpeg" class="d-block w-100 carousel-img" alt="Promoción Martes 2x1 en bicicletas urbanas">
                         <div class="carousel-caption bg-dark bg-opacity-75 rounded p-2">
                             <h5>Martes 2x1</h5>
                             <p>Disfruta de nuestras bicicletas urbanas al doble por el mismo precio todos los martes.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/bicicleta.jpg" class="d-block w-100 carousel-img" alt="20% de descuento en bicicletas eléctricas de lunes a jueves">
+                        <img src="img/electrica20.jpeg" class="d-block w-100 carousel-img" alt="20% de descuento en bicicletas eléctricas de lunes a jueves">
                         <div class="carousel-caption bg-dark bg-opacity-75 rounded p-2">
                             <h5>20% OFF en Eléctricas</h5>
                             <p>Rueda con menor esfuerzo de lunes a jueves a un precio especial.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/ruta.jpg" class="d-block w-100 carousel-img" alt="Recorrido guiado gratis si cumples años">
+                        <img src="img/grupociclistas.jpg" class="d-block w-100 carousel-img" alt="Recorrido guiado gratis si cumples años">
                         <div class="carousel-caption bg-dark bg-opacity-75 rounded p-2">
                             <h5>¡Celebra tu cumpleaños!</h5>
                             <p>El recorrido guiado es completamente gratis en el día de tu cumpleaños.</p>
@@ -84,91 +88,92 @@
                 </button>
             </div>
         </section>
-
         <section id="quienes-somos" class="mb-5">
             <h2 class="section-title-custom mb-3">¿Quiénes somos?</h2>
             <p class="fs-5 text-muted">Somos una empresa apasionada por la movilidad sostenible en Medellín, comprometida en brindar experiencias únicas sobre dos ruedas tanto para locales como para turistas.</p>
         </section>
-
-        <!-- SECCIÓN NUESTRA FLOTA (Grid adaptable con 7 modelos y Flexbox interno) -->
         <section id="flota" class="mb-5">
             <h2 class="section-title-custom mb-4">Nuestra Flota de Bicicletas</h2>
-            <div class="flota-grid">
-                
-                <article class="tarjeta-flota shadow-sm">
-                    <img src="img/bicicleta.jpg" alt="Urbana Clásica">
-                    <div class="tarjeta-cuerpo">
-                        <h3>Urbana Clásica</h3>
-                        <p class="descripcion text-muted">Cómoda y liviana para las ciclorrutas.</p>
-                        <p class="precio">$10.000 / hora</p>
-                        <a href="paginas/reservas.html" class="btn btn-naranja w-100 mt-auto">Reservar</a>
+            <div class="row g-4">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 d-flex flex-column">
+                        <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=600&q=80" class="card-img-top card-img-fixed" alt="Urbana Clásica">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 card-title text-primary-custom">Urbana Clásica</h3>
+                            <p class="card-text text-muted">Cómoda y liviana para las ciclorrutas.</p>
+                            <p class="fw-bold text-dark mt-auto mb-2">$10.000 / hora</p>
+                            <a href="paginas/reservas.html" class="btn btn-naranja w-100">Reservar</a>
+                        </div>
                     </div>
-                </article>
-
-                <article class="tarjeta-flota shadow-sm">
-                    <img src="img/portada.jpg" alt="Urbana Plegable">
-                    <div class="tarjeta-cuerpo">
-                        <h3>Urbana Plegable</h3>
-                        <p class="descripcion text-muted">Se dobla en segundos; ideal para combinar con el metro.</p>
-                        <p class="precio">$12.000 / hora</p>
-                        <a href="paginas/reservas.html" class="btn btn-naranja w-100 mt-auto">Reservar</a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 d-flex flex-column">
+                        <img src="img/plegable.jpg" class="card-img-top card-img-fixed" alt="Urbana Plegable">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 card-title text-primary-custom">Urbana Plegable</h3>
+                            <p class="card-text text-muted">Se dobla en segundos; ideal para combinar con el metro.</p>
+                            <p class="fw-bold text-dark mt-auto mb-2">$12.000 / hora</p>
+                            <a href="paginas/reservas.html" class="btn btn-naranja w-100">Reservar</a>
+                        </div>
                     </div>
-                </article>
-
-                <article class="tarjeta-flota shadow-sm">
-                    <img src="img/bicicleta.jpg" alt="Montaña Trail">
-                    <div class="tarjeta-cuerpo">
-                        <h3>Montaña Trail</h3>
-                        <p class="descripcion text-muted">Suspensión delantera y 21 cambios para las subidas.</p>
-                        <p class="precio">$15.000 / hora</p>
-                        <a href="paginas/reservas.html" class="btn btn-naranja w-100 mt-auto">Reservar</a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 d-flex flex-column">
+                        <img src="img/trail.jpeg" class="card-img-top card-img-fixed" alt="Montaña Trail">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 card-title text-primary-custom">Montaña Trail</h3>
+                            <p class="card-text text-muted">Suspensión delantera y 21 cambios para las subidas.</p>
+                            <p class="fw-bold text-dark mt-auto mb-2">$15.000 / hora</p>
+                            <a href="paginas/reservas.html" class="btn btn-naranja w-100">Reservar</a>
+                        </div>
                     </div>
-                </article>
-
-                <article class="tarjeta-flota shadow-sm">
-                    <img src="img/ruta.jpg" alt="Gravel Aventura">
-                    <div class="tarjeta-cuerpo">
-                        <h3>Gravel Aventura</h3>
-                        <p class="descripcion text-muted">Para rutas mixtas de asfalto y destapado.</p>
-                        <p class="precio">$18.000 / hora</p>
-                        <a href="paginas/reservas.html" class="btn btn-naranja w-100 mt-auto">Reservar</a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 d-flex flex-column">
+                        <img src="img/gravel.jpeg" class="card-img-top card-img-fixed" alt="Gravel Aventura">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 card-title text-primary-custom">Gravel Aventura</h3>
+                            <p class="card-text text-muted">Para rutas mixtas de asfalto y destapado.</p>
+                            <p class="fw-bold text-dark mt-auto mb-2">$18.000 / hora</p>
+                            <a href="paginas/reservas.html" class="btn btn-naranja w-100">Reservar</a>
+                        </div>
                     </div>
-                </article>
-
-                <article class="tarjeta-flota shadow-sm">
-                    <img src="img/portada.jpg" alt="Eléctrica Urbana">
-                    <div class="tarjeta-cuerpo">
-                        <h3>Eléctrica Urbana</h3>
-                        <p class="descripcion text-muted">Asistencia eléctrica con 45 km de autonomía.</p>
-                        <p class="precio">$25.000 / hora</p>
-                        <a href="paginas/reservas.html" class="btn btn-naranja w-100 mt-auto">Reservar</a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 d-flex flex-column">
+                        <img src="img/electrica.jpeg"card-img-top card-img-fixed" alt="Eléctrica Urbana">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 card-title text-primary-custom">Eléctrica Urbana</h3>
+                            <p class="card-text text-muted">Asistencia eléctrica con 45 km de autonomía.</p>
+                            <p class="fw-bold text-dark mt-auto mb-2">$25.000 / hora</p>
+                            <a href="paginas/reservas.html" class="btn btn-naranja w-100">Reservar</a>
+                        </div>
                     </div>
-                </article>
-
-                <article class="tarjeta-flota shadow-sm">
-                    <img src="img/bicicleta.jpg" alt="Infantil">
-                    <div class="tarjeta-cuerpo">
-                        <h3>Infantil</h3>
-                        <p class="descripcion text-muted">Para niños de 6 a 10 años.</p>
-                        <p class="precio">$8.000 / hora</p>
-                        <a href="paginas/reservas.html" class="btn btn-naranja w-100 mt-auto">Reservar</a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 d-flex flex-column">
+                        <img src="img/infaitl.jpeg" class="card-img-top card-img-fixed" alt="Infantil">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 card-title text-primary-custom">Infantil</h3>
+                            <p class="card-text text-muted">Para niños de 6 a 10 años.</p>
+                            <p class="fw-bold text-dark mt-auto mb-2">$8.000 / hora</p>
+                            <a href="paginas/reservas.html" class="btn btn-naranja w-100">Reservar</a>
+                        </div>
                     </div>
-                </article>
-
-                <!-- Modelo #7 exigido por el MiniReto (Tándem) -->
-                <article class="tarjeta-flota shadow-sm">
-                    <img src="img/ruta.jpg" alt="Tándem">
-                    <div class="tarjeta-cuerpo">
-                        <h3>Tándem</h3>
-                        <p class="descripcion text-muted">Para dos personas; perfecta para pasear en pareja.</p>
-                        <p class="precio">$20.000 / hora</p>
-                        <a href="paginas/reservas.html" class="btn btn-naranja w-100 mt-auto">Reservar</a>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 d-flex flex-column">
+                        <img src="img/tandem.jpeg" class="card-img-top card-img-fixed" alt="Tándem">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 card-title text-primary-custom">Tándem</h3>
+                            <p class="card-text text-muted">Para dos personas; perfecta para pasear en pareja.</p>
+                            <p class="fw-bold text-dark mt-auto mb-2">$20.000 / hora</p>
+                            <a href="paginas/reservas.html" class="btn btn-naranja w-100">Reservar</a>
+                        </div>
                     </div>
-                </article>
-
+                </div>
             </div>
         </section>
-
         <section id="como-alquilar" class="mb-5">
             <div class="row g-4">
                 <div class="col-md-6">
@@ -194,7 +199,6 @@
                 </div>
             </div>
         </section>
-
         <section id="encuentranos" class="p-4 bg-verde-claro rounded shadow-sm mb-5 text-center">
             <h2 class="h3 text-primary-custom mb-2">Encuéntranos</h2>
             <p class="mb-3">Estamos ubicados en el corazón de la ciudad de la eterna primavera.</p>
@@ -202,20 +206,16 @@
                 <i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i> Ver ubicación en Google Maps
             </a>
         </section>
-
     </main>
-
     <a href="https://wa.me/573000000000" target="_blank" class="whatsapp-float shadow" aria-label="Contactar por WhatsApp">
         <i class="bi bi-whatsapp"></i>
     </a>
-
     <footer class="footer-custom py-4 text-center text-light">
         <div class="container">
             <p class="mb-1">&copy; 2026 Rueda Libre. Todos los derechos reservados.</p>
             <p class="mb-0">Contacto: <a href="mailto:hola@ruedalibre.example" class="text-naranja text-decoration-none"><i class="bi bi-envelope-fill me-1" aria-hidden="true"></i>hola@ruedalibre.example</a></p>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

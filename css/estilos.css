@@ -7,7 +7,6 @@
     --bs-border-radius: 0.5rem;
 }
 
-/* Regla para evitar desbordamientos de imágenes */
 img {
     max-width: 100%;
     height: auto;
@@ -74,52 +73,8 @@ img {
 }
 
 .card-img-fixed {
-    height: 200px;
-    object-fit: cover;
-}
-
-/* ==========================================================================
-   ESTILOS PARA LA SECCIÓN DE LA FLOTA (Grid + Flexbox)
-   ========================================================================== */
-.flota-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.tarjeta-flota {
-    background-color: #ffffff;
-    border: 1px solid #dee2e6;
-    border-radius: var(--bs-border-radius);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.tarjeta-flota img {
     height: 180px;
     object-fit: cover;
-    width: 100%;
-}
-
-.tarjeta-cuerpo {
-    padding: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.tarjeta-cuerpo h3 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--bs-primary);
-    margin-bottom: 0.5rem;
-}
-
-.tarjeta-cuerpo .precio {
-    font-weight: bold;
-    color: #1b4332;
-    margin-bottom: 1rem;
 }
 
 .footer-custom {
@@ -160,12 +115,10 @@ img {
     transform: scale(1.08);
 }
 
-/* ==========================================================================
-   AJUSTES RESPONSIVE (MÓVIL)
-   ========================================================================== */
+/* responsive */
 @media (max-width: 768px) {
     .carousel-img {
-        height: 220px; /* Reduce la altura en celulares */
+        height: 220px; 
     }
     
     .carousel-caption {
